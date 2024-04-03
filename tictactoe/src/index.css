@@ -1,31 +1,80 @@
-* {
-  box-sizing: border-box;
-}
+/* CSS untuk styling game */
 
+/* Menerapkan latar belakang dan membuat game berada di tengah layar */
 body {
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Menggunakan tinggi viewport untuk memastikan game berada di tengah */
+  background-color: #f8f9fa; /* Warna latar belakang yang lebih cerah */
+  margin: 0;
+  font-family: "Inter", sans-serif; /* Menggunakan font Inter dari Google Fonts */
 }
 
-.square {
-  width: 35px;
-  height: 35px;
-  border: 1px solid black;
-  background-color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
-  cursor: pointer;
+.game-container {
+  display: flex;
 }
+
+.game {
+  display: flex;
+  align-items: center; /* Mengatur agar game berada di tengah horizontal */
+  background-color: #fff; /* Warna latar belakang game */
+  padding: 20px;
+  border-radius: 10px; /* Mengatur sudut membulat pada game */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan efek bayangan untuk game */
+  margin-right: 20px; /* Menambahkan jarak antara game board dan game info */
+}
+
+/* Styling lainnya tetap sama seperti sebelumnya */
 .board {
   display: flex;
   flex-wrap: wrap;
-  width: 105px;
-  height: 105px;
+  width: 145px;
+  height: 145px;
 }
-.status {
-  margin-bottom: 10px;
-}
-.game {
+
+.square {
+  width: 45px;
+  height: 45px;
+  margin-right: -1px;
+  margin-bottom: -1px;
+  border: 1px solid black;
+  background-color: #f0f0f0;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.square.X {
+  color: #f00;
+}
+
+.square.O {
+  color: #00f;
+}
+
+.status {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.gameInfo {
+  margin-top: 15px;
+}
+
+.gameInfo button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.gameInfo button:hover {
+  background-color: #0056b3;
 }
